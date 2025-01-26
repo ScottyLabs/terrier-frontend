@@ -1,5 +1,4 @@
 import { RouterProvider, createRouter } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { routeTree } from "./routeTree.gen";
@@ -20,16 +19,7 @@ declare module "@tanstack/react-router" {
 // biome-ignore lint/style/noNonNullAssertion: guaranteed to exist
 const rootElement = document.getElementById("app")!;
 
-function App() {
-    return (
-        <>
-            <RouterProvider router={router} />
-            <TanStackRouterDevtools router={router} />
-        </>
-    );
-}
-
 if (!rootElement.innerHTML) {
     const root = ReactDOM.createRoot(rootElement);
-    root.render(<App />);
+    root.render(<RouterProvider router={router} />);
 }
