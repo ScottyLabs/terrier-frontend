@@ -1,0 +1,25 @@
+{
+    "name": "bifrost",
+    "private": true,
+    "scripts": {
+        "build": "turbo build",
+        "dev": "turbo dev",
+        "check": "biome check --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*": ["bun run check"]
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.9.4",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.4.2",
+        "turbo": "^2.3.4",
+        "typescript": "5.7.3"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "packageManager": "bun@1.2.0",
+    "workspaces": ["apps/*", "packages/*"]
+}
