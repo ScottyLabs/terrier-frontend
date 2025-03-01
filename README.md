@@ -1,5 +1,5 @@
-# bifrost
+# terrier.build
 
-Bifrost frontend repository
+Terrier frontend repository
 
 Use `turbo run dev`
