@@ -5,14 +5,19 @@
     "tasks": {
         "build": {
             "outputs": ["dist/**"],
-            "inputs": ["$TURBO_DEFAULT$", ".env"]
+            "inputs": ["$TURBO_DEFAULT$", "schema.d.ts", ".env"],
+            "dependsOn": ["//#generate-schema"]
         },
         "typecheck": {
             "dependsOn": ["^typecheck"]
         },
         "dev": {
             "persistent": true,
-            "cache": false
+            "cache": false,
+            "dependsOn": ["//#generate-schema"]
+        },
+        "//#generate-schema": {
+            "outputs": ["schema.d.ts"]
         }
     }
 }
