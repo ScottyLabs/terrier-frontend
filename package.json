@@ -26,7 +26,8 @@
         "build": "turbo build",
         "dev": "turbo dev",
         "check": "biome check --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true",
-        "prepare": "husky"
+        "prepare": "husky",
+        "generate-schema": "openapi-typescript ../terrier-backend/api/src/main/resources/openapi.yaml -o schema.d.ts"
     },
     "workspaces": ["apps/*", "packages/*"]
 }
