@@ -1,8 +1,15 @@
 import { RouterProvider, createRouter } from "@tanstack/react-router";
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { routeTree } from "./routeTree.gen";
 import "@radix-ui/themes/styles.css";
+
+declare global {
+    namespace NodeJS {
+        interface ProcessEnv {
+            BASE_URL: string;
+        }
+    }
+}
 
 // Set up a Router instance
 const router = createRouter({

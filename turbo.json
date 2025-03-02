@@ -1,9 +1,11 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "globalEnv": [],
+    "globalEnv": ["BASE_URL"],
+    "globalDependencies": [".env"],
     "tasks": {
         "build": {
-            "outputs": ["dist/**"]
+            "outputs": ["dist/**"],
+            "inputs": ["$TURBO_DEFAULT$", ".env"]
         },
         "typecheck": {
             "dependsOn": ["^typecheck"]
