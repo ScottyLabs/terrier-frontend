@@ -1,6 +1,7 @@
 import { Theme } from "@radix-ui/themes";
-import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { Navbar } from "~/components/navbar";
 
 export const Route = createRootRoute({
     component: RootComponent,
@@ -9,18 +10,7 @@ export const Route = createRootRoute({
 function RootComponent() {
     return (
         <Theme>
-            <div className="p-2 flex gap-2 text-lg">
-                <Link
-                    to="/"
-                    activeProps={{
-                        className: "font-bold",
-                    }}
-                    activeOptions={{ exact: true }}
-                >
-                    Home
-                </Link>
-            </div>
-            <hr />
+            <Navbar />
             <Outlet />
             <TanStackRouterDevtools position="bottom-right" />
         </Theme>
