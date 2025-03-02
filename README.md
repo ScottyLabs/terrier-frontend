@@ -1,5 +1,5 @@
 # terrier.build
 
-Terrier frontend repository
+## Development
 
-Use `turbo run dev`
+Copy `.env.example` to `.env` and fill in the appropriate `BASE_URL`. Then, use `turbo run dev` to run the project.
