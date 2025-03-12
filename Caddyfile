@@ -14,7 +14,7 @@
 }
 
 # site block, listens on the $PORT environment variable, automatically assigned by railway
-:{$PORT:5173} {
+:{$PORT:3000} {
 	# access logs
 	log {
 		format json # set access log format to json mode
@@ -24,7 +24,7 @@
 	rewrite /health /*
 
 	# serve from the 'dist' folder (Vite builds into the 'dist' folder)
-	root * dist
+	root * apps/web/dist
 
 	# enable gzipping responses
 	encode gzip
