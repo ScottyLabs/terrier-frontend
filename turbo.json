@@ -16,6 +16,9 @@
             "cache": false,
             "dependsOn": ["//#generate-schema"]
         },
+        "start": {
+            "dependsOn": ["//#generate-schema"]
+        },
         "//#generate-schema": {
             "outputs": ["schema.d.ts"]
         }
