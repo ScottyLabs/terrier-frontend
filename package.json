@@ -8,9 +8,7 @@
         "@types/bun": "^1.2.2",
         "husky": "^9.1.7",
         "lint-staged": "^15.4.2",
-        "openapi-typescript": "^7.6.1",
-        "turbo": "^2.3.4",
-        "typescript": "5.7.3"
+        "turbo": "^2.3.4"
     },
     "commitlint": {
         "extends": ["@commitlint/config-conventional"]
@@ -28,8 +26,7 @@
         "dev": "turbo dev",
         "start": "turbo start",
         "check": "biome check --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true",
-        "prepare": "husky",
-        "generate-schema": "openapi-typescript https://raw.githubusercontent.com/ScottyLabs/terrier-backend/refs/heads/main/api/src/main/resources/openapi.yaml -o schema.d.ts"
+        "prepare": "husky"
     },
     "workspaces": ["apps/*", "packages/*"]
 }

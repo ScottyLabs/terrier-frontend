@@ -6,7 +6,7 @@
         "build": {
             "outputs": ["dist/**"],
             "inputs": ["$TURBO_DEFAULT$", "schema.d.ts", ".env"],
-            "dependsOn": ["//#generate-schema"]
+            "dependsOn": ["@terrier/api#generate"]
         },
         "typecheck": {
             "dependsOn": ["^typecheck"]
@@ -14,12 +14,13 @@
         "dev": {
             "persistent": true,
             "cache": false,
-            "dependsOn": ["//#generate-schema"]
+            "dependsOn": ["@terrier/api#generate"]
         },
         "start": {
-            "dependsOn": ["//#generate-schema"]
+            "dependsOn": ["@terrier/api#generate"]
         },
-        "//#generate-schema": {
+        "@terrier/api#generate": {
+            "cache": true,
             "outputs": ["schema.d.ts"]
         }
     }

@@ -1,5 +1,5 @@
 {
-    "name": "terrier",
+    "name": "@terrier/web",
     "version": "0.0.0",
     "private": true,
     "type": "module",
@@ -23,10 +23,12 @@
         "@tanstack/react-router": "^1.99.0",
         "@tanstack/router-devtools": "^1.99.0",
         "@tanstack/start": "^1.99.3",
+        "@terrier/api": "workspace:*",
         "openapi-fetch": "^0.13.4",
         "openapi-react-query": "^0.3.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "vite-tsconfig-paths": "^5.1.4"
+        "vite-tsconfig-paths": "^5.1.4",
+        "zod": "^3.24.2"
     }
 }

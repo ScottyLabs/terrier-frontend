@@ -1,0 +1,22 @@
+{
+    "name": "@terrier/api",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "generate": "openapi-typescript https://raw.githubusercontent.com/ScottyLabs/terrier-backend/refs/heads/main/terrier-api/src/main/resources/openapi.yaml -o schema.d.ts"
+    },
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "devDependencies": {
+        "openapi-typescript": "^7.6.1",
+        "typescript": "5.7.3"
+    },
+    "dependencies": {
+        "openapi-fetch": "^0.13.4",
+        "openapi-react-query": "^0.3.0",
+        "vite-tsconfig-paths": "^5.1.4"
+    }
+}
